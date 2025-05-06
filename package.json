@@ -1,0 +1,26 @@
+{
+  "name": "playground",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "serve": "bun run ./build/index.js",
+    "start": "bun run ./src/index.ts",
+    "build": "bun build ./src/index.ts --outdir ./build --target=bun --external util",
+    "dev": "bun run --watch ./src/index.ts",
+    "deploy:quick":  "bun start && cloudflared tunnel --url http://localhost:3000",
+    "deploy": "bun start && cloudflared tunnel --url http://localhost:3000 --no-autoupdate"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "ts-node": "^10.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Cloudflare Tunnel Status</title>
+</head>
+<body>
+    <div class="background-glow"></div>
+
+    <div class="container">
+        <header>
+            <h1>Cloudflare Tunnel</h1>
+            <a href="https://github.com/LuigiVanin" target="_blank" rel="noopener noreferrer" class="github-link">
+                GitHub: LuigiVanin
+            </a>
+        </header>
+
+        <main>
+            <section class="status-info">
+                <h2>Status</h2>
+                <p>
+                    <span class="data-label">Last Update:</span>
+                    <span class="data-value"><%= date %></span>
+                </p>
+                <p>
+                    <span class="data-label">Request Count:</span>
+                    <span class="data-value"><%= counter %></span>
+                </p>
+            </section>
+
+            <section class="image-section">
+                 <img src="/images/random-image.png" alt="Illustrative abstract graphic" class="content-image">
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <%= new Date().getFullYear() %> - Powered by Bun & Express</p>
+        </footer>
+    </div>
+</body>
+</html>
